@@ -10,7 +10,7 @@ const transporter = nodemailer.createTransport({
 
 const sendBirthdayEmail = (user) => {
     const mailOptions = {
-        from: `"[Your Business Name]" <${process.env.EMAIL_USER}>`,
+        from: `"[The Originals]" <${process.env.EMAIL_USER}>`,
         to: user.email,
         subject: 'Happy Birthday! 🎉',
         html: `
@@ -18,7 +18,7 @@ const sendBirthdayEmail = (user) => {
                 <h2>Happy Birthday, ${user.username}!</h2>
                 <p>We are sending you the warmest wishes on your special day.</p>
                 <p>May your day be filled with joy and laughter. Have a fantastic celebration!</p>
-                <p>Best wishes,<br>The Team at [Your Business Name]</p>
+                <p>Best wishes,<br>The Team at [The Originals]</p>
                 
             </div>
         `,
