@@ -30,7 +30,7 @@ const checkBirthdays = async () => {
 // Function to start the scheduled job
 const startBirthdayCheck = () => {
     // Schedule to run at 7:00 AM every day, in the Africa/Lagos timezone
-    cron.schedule('20 09 * * *', checkBirthdays, {
+    cron.schedule('00 07 * * *', checkBirthdays, {
         scheduled: true,
         timezone: "Africa/Lagos",
     });
@@ -39,3 +39,4 @@ const startBirthdayCheck = () => {
 
 
 module.exports = { startBirthdayCheck };
+
